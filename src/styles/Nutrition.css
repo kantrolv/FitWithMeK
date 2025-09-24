@@ -1,0 +1,626 @@
+/* Modern Nutrition Page Styling */
+.nutrition-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.nutrition-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(74, 144, 226, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.nutrition-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nutrition-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.nutrition-title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #4a90e2, #63e2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.nutrition-subtitle {
+  color: #b0c4de;
+  font-size: 0.9rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Tabs Styling */
+.nutrition-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #4a90e2, #63e2ff);
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+/* Category Styling */
+.protein-category {
+  margin-bottom: 1.5rem;
+}
+
+.category-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #4a90e2;
+  display: inline-block;
+}
+
+.food-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.food-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.food-name {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.protein-content {
+  background: rgba(74, 144, 226, 0.1);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.protein-label {
+  color: #63e2ff;
+  font-size: 0.8rem;
+}
+
+.protein-value {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  color: #b0c4de;
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.benefits-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+  font-size: 1.2rem;
+}
+
+/* Tips Section */
+.nutrition-tips {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nutrition-tips h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.tip-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.tip-card h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tip-card p {
+  color: #b0c4de;
+  line-height: 1.6;
+  font-size: 0.8rem;
+}
+
+/* CTA Section */
+.nutrition-cta {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(99, 226, 255, 0.1));
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nutrition-cta h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.nutrition-cta p {
+  color: #b0c4de;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #4a90e2, #63e2ff);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nutrition-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .nutrition-title {
+    font-size: 1.5rem;
+  }
+
+  .nutrition-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+
+  .food-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-tips {
+    padding: 1rem 0.5rem;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-cta {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .nutrition-cta h2 {
+    font-size: 1.2rem;
+  }
+
+  .calorie-calculator {
+    padding: 1rem 0.5rem;
+  }
+
+  .calculator-result {
+    gap: 0.75rem;
+  }
+
+  .result-card .calories {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.food-card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Hover Effects */
+.food-card:hover .food-name {
+  color: #63e2ff;
+}
+
+.food-card:hover .protein-content {
+  background: rgba(74, 144, 226, 0.2);
+}
+
+/* Add smooth scrolling to the page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add loading animation for images */
+.nutrition-image img {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add hover effect for buttons */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Calorie Calculator Styling */
+.calorie-calculator {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.calculator-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calorie-calculator h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #4a90e2, #63e2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.calorie-calculator p {
+  color: #b0c4de;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.calculator-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group select option {
+  background: #2d2d2d;
+  color: #ffffff;
+}
+
+.calculator-form button {
+  grid-column: 1 / -1;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.calculator-result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+}
+
+.result-card h3 {
+  color: #63e2ff;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-card .calories {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(45deg, #4a90e2, #63e2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.result-card .description {
+  color: #b0c4de;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Input Number Spinner Styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Hover Effects */
+.form-group input:hover,
+.form-group select:hover {
+  border-color: rgba(74, 144, 226, 0.5);
+}
+
+/* Loading Animation for Calculate Button */
+.calculator-form button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design for Calculator */
+@media (max-width: 768px) {
+  .calorie-calculator {
+    padding: 1rem 0.5rem;
+  }
+
+  .calculator-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .calculator-result {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .calorie-calculator h2 {
+    font-size: 1.2rem;
+  }
+
+  .result-card .calories {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tooltip for Activity Levels */
+.form-group select[name="activityLevel"] {
+  cursor: pointer;
+}
+
+.form-group select[name="activityLevel"]:hover {
+  border-color: #4a90e2;
+}
+
+/* Success Animation for Results */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.calculator-result.show {
+  animation: slideUp 0.5s ease forwards, pulse 1s ease-in-out;
+}
+
+/* Enhanced Focus States */
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Result Card Gradients */
+.result-card:nth-child(1) {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(99, 226, 255, 0.1));
+}
+
+.result-card:nth-child(2) {
+  background: linear-gradient(135deg, rgba(255, 99, 132, 0.1), rgba(255, 159, 64, 0.1));
+}
+
+.result-card:nth-child(3) {
+  background: linear-gradient(135deg, rgba(75, 192, 192, 0.1), rgba(54, 162, 235, 0.1));
+}
